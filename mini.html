@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        
+        text-align: center;
+        justify-content: center;
+        margin-top:300px;
+    }
+    button{
+        background-color: cornsilk;
+        padding:20px;
+        border-style:groove;
+        
+    }
+    button:hover{
+        background-color: darkseagreen;
+    }
+</style>
+<body>
+    <p>IF YOU WANT TO SEE NEXT COLOURS 👇🤪</p>
+    
+   <button>CLICK ME </button>
+</body>
+<script>
+    const button=document.querySelector("button");
+    const body=document.querySelector("body");
+    const color=['lavender','lightblue','lightpink','azure','lightgrey','lightyellow','grey','bisque']
+    body.style.backgroundColor='honeydew';
+    document.addEventListener("click",function(){
+        const colorInd=parseInt(Math.random()*color.length);
+        body.style.backgroundColor=color[colorInd];
+    });
+</script>
+</html>
